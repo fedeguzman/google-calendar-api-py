@@ -7,8 +7,6 @@ import oauth2client
 from oauth2client import client
 from oauth2client import tools
 
-
-
 try:
     import argparse
     flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
@@ -47,6 +45,7 @@ def get_credentials():
             credentials = tools.run(flow, store)
         print('Storing credentials to ' + credential_path)
     return credentials
+    
 
 def main():
     credentials = get_credentials()
